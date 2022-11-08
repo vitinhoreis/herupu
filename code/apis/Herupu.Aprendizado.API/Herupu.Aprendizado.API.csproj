@@ -1,0 +1,74 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+    <AWSProjectType>Lambda</AWSProjectType>
+    <!-- This property makes the build directory similar to a publish directory and helps the AWS .NET Lambda Mock Test Tool find project dependencies. -->
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <!-- Generate ready to run images during publishing to improve cold start time. -->
+    <PublishReadyToRun>true</PublishReadyToRun>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Images\07b06869-8daf-4842-9b20-261072ba279c.png" />
+    <None Remove="Images\19fed552-4301-4d8e-a5f2-e739b8fb5433.png" />
+    <None Remove="Images\4e29fd4a-6081-4889-b89a-5a673b6461a5.png" />
+    <None Remove="Images\bce0cfd5-bfac-4ae3-b5cc-52c9d3fb56a0.png" />
+    <None Remove="Images\becd33a3-7d92-4044-ad7e-ac9b1062d9a2.png" />
+    <None Remove="Images\c52c8c48-bb1d-4f70-9698-51456c4f2024.png" />
+    <None Remove="Images\de507e0c-20d2-400f-9ce9-49b268dbd574.png" />
+    <None Remove="Images\e79fe534-28a0-43a0-ac6d-59ea665ecf53.png" />
+    <None Remove="Images\e9e44d02-d162-4dd8-a161-a85ed57f2811.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\07b06869-8daf-4842-9b20-261072ba279c.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\19fed552-4301-4d8e-a5f2-e739b8fb5433.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\4bcdb07d-2aa8-4aec-b109-5e28ecd86f79.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\4e29fd4a-6081-4889-b89a-5a673b6461a5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\7dded2fc-3456-45d0-8cf8-d70008de89c4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\bce0cfd5-bfac-4ae3-b5cc-52c9d3fb56a0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\becd33a3-7d92-4044-ad7e-ac9b1062d9a2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\c52c8c48-bb1d-4f70-9698-51456c4f2024.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\de507e0c-20d2-400f-9ce9-49b268dbd574.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\e10a0bb7-afcc-4033-8314-523338b17404.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\e79fe534-28a0-43a0-ac6d-59ea665ecf53.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\e9e44d02-d162-4dd8-a161-a85ed57f2811.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Amazon.Lambda.AspNetCoreServer" Version="7.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Herupu.DAO\Herupu.DAL.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="20dp"
+    android:paddingTop="20dp"
+    android:paddingEnd="20dp"
+    android:paddingBottom="20dp"
+    android:background="#fdeefd"
+    tools:context=".AtividadeActivity">
+
+    <TextView
+        android:id="@+id/txv_herupu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Herupu"
+        android:textColor="#44012c"
+        android:textSize="50sp"
+        android:textStyle="italic"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintTop_toTopOf="@+id/txv_herupu"
+        app:layout_constraintBottom_toBottomOf="@+id/txv_herupu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/_png" />
+
+    <ImageView
+        android:id="@+id/img_seta_volta"
+        android:layout_width="38dp"
+        android:layout_height="37dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/txv_herupu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txv_herupu"
+        app:srcCompat="@drawable/seta_volta" />
+
+    <TextView
+        android:id="@+id/txv_descricao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ESCREVA O NOME DO ANIMAL ABAIXO DE SUA IMAGEM"
+        android:textColor="#44012c"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/txv_herupu"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/contador"-->
+<!--        android:layout_width="48dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:text="0/4"-->
+<!--        android:textSize="30sp"-->
+<!--        android:textColor="#44012c"-->
+<!--        android:layout_marginBottom="44dp"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/txv_descricao"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/txv_descricao"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/txv_descricao" />-->
+
+    <GridLayout
+        android:id="@+id/grid_atividade_item"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:stretchMode="columnWidth"
+        android:rowCount="2"
+        android:orientation="vertical"
+        android:padding="15dp"
+        app:layout_constraintStart_toStartOf="@id/txv_descricao"
+        app:layout_constraintTop_toBottomOf="@+id/txv_descricao"
+        tools:context=".GridXMLActivity">
+    </GridLayout>
+
+    <Button
+        android:id="@+id/btn_corrigir"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:textColor="#fdeefd"
+        android:text="Corrigir"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/grid_atividade_item"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="#44012c" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,2 +1,2 @@
 # herupu
-Projeto acadêmico com o objetivo de desenvolver uma plataforma voltada a educação infantil.
+Projeto acadêmico com intuito de desenvolver uma plataforma de aprendizado.
